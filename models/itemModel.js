@@ -5,6 +5,11 @@ async function getAll() {
   return result.rows;
 }
 
+async function getById(id) {
+  const result = await pool.query("SELECT * FROM item WHERE id=$1", [id]);
+  return result.rows[0];
+}
+
 async function getByCategory(categoryId) {
   const result = await pool.query("SELECT * FROM item WHERE categoryId=$1", [
     categoryId,
@@ -37,6 +42,7 @@ async function remove(id) {
 
 module.exports = {
   getAll,
+  getById,
   getByCategory,
   create,
   update,

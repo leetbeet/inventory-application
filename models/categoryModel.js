@@ -5,6 +5,11 @@ async function getAll() {
   return result.rows;
 }
 
+async function getById(id) {
+  const result = await pool.query("SELECT * FROM category WHERE id=$1", [id]);
+  return result.rows[0];
+}
+
 async function create(name) {
   const result = await pool.query(
     "INSERT INTO category (name) VALUES ($1) RETURNING *",
@@ -31,6 +36,7 @@ async function remove(id) {
 
 module.exports = {
   getAll,
+  getById,
   create,
   update,
   remove,
