@@ -5,6 +5,13 @@ async function getAll() {
   return result.rows;
 }
 
+async function getByCategory(categoryId) {
+  const result = await pool.query("SELECT * FROM item WHERE categoryId=$1", [
+    categoryId,
+  ]);
+  return result.rows;
+}
+
 async function create(name, categoryId, brand, quantity) {
   const result = await pool.query(
     "INSERT INTO item (name, categoryId, brand, quantity) VALUES ($1, $2, $3, $4) RETURNING *",
@@ -30,6 +37,7 @@ async function remove(id) {
 
 module.exports = {
   getAll,
+  getByCategory,
   create,
   update,
   remove,
