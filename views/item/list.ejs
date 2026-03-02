@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Items</title>
+  </head>
+  <body>
+    <%- include('nav'); -%>
+    <main>
+    <% items.forEach((item) => { %>
+      <div class="item-card">
+        <p>Name: <%= item.name %></p>
+        <p>ID: <%= item.id %></p>
+        <p>Category ID: <%= item.categoryId %></p>
+        <p>Brand: <%= item.brand %></p>
+        <p>Quantity: <%= item.quantity %></p>
+        <div class="item-buttons">
+          <a href="item/<%= item.id %>/delete"><button>Delete</button></a>
+          <a href="item/<%= item.id %>/update"><button>Edit</button></a>
+        </div>
+      </div>
+    <% }) %>
+    </main>
+  </body>
+</html>
