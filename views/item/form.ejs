@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item: form</title>
+  </head>
+  <body>
+    <%- include('nav'); -%>
+    <form
+      action="<%= item ? '/item/' + item.id + '/update' : '/item/create' %>"
+      method="POST"
+    >
+      <label for="name">Item:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="<%= item.name %> || ''"
+      />
+
+      <label for="categoryId">Category ID: </label>
+      <input
+        type="number"
+        id="categoryId"
+        name="categoryId"
+        placeholder="<%= item.categoryId %> || ''"
+      />
+
+      <label for="brand">Brand: </label>
+      <input
+        type="text"
+        id="brand"
+        name="brand"
+        placeholder="<%= item.brand %> || ''"
+      />
+
+      <label for="quantity">Quantity: </label>
+      <input
+        type="number"
+        id="quantity"
+        name="quantity"
+        placeholder="<%= item.quantity %> || ''"
+      />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
