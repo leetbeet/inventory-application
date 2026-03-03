@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories</title>
+  </head>
+  <body>
+    <%- include('nav'); -%>
+    <h2>Categories</h2>
+    <main>
+    <% categories.forEach((category) => { %>
+      <div class="category-card">
+        <p>Name: <%= category.name %></p>
+        <p>ID: <%= category.id %></p>
+        <div class="category-buttons">
+          <a href="category/<%= category.id %>/delete"><button>Delete</button></a>
+          <a href="category/<%= category.id %>/update"><button>Edit</button></a>
+        </div>
+        <a href="category/<%= category.id %>"><button>View Items</button></a>
+      </div>
+    <% }) %>
+    <a href="category/create"><button>Add Category</button></a>
+    </main>
+  </body>
+</html>
