@@ -1,6 +1,6 @@
 const { body, validationResult } = require("express-validator");
 
-exports.validateCategory = [
+exports.validateItem = [
   body("name").trim().escape().notEmpty().withMessage("Name required"),
   body("categoryId")
     .trim()
