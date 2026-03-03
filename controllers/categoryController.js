@@ -13,12 +13,13 @@ async function listItems(req, res) {
 }
 
 function showCreate(req, res) {
-  res.render("category/form");
+  const category = null;
+  res.render("category/form", { category });
 }
 
 async function create(req, res) {
   await categoryModel.create(req.body.name);
-  res.redirect("/categories");
+  res.redirect("/category");
 }
 
 async function showUpdate(req, res) {
@@ -28,7 +29,7 @@ async function showUpdate(req, res) {
 
 async function update(req, res) {
   await categoryModel.update(req.body.name, req.params.id);
-  res.redirect("/categories");
+  res.redirect("/category");
 }
 
 async function showRemove(req, res) {
@@ -38,7 +39,7 @@ async function showRemove(req, res) {
 
 async function remove(req, res) {
   await categoryModel.remove(req.params.id);
-  res.redirect("/categories");
+  res.redirect("/category");
 }
 
 module.exports = {

@@ -7,7 +7,8 @@ async function list(req, res) {
 }
 
 function showCreate(req, res) {
-  res.render("item/form");
+  const item = null;
+  res.render("item/form", { item });
 }
 
 async function create(req, res) {
