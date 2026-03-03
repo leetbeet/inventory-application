@@ -12,8 +12,8 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.use("/items", itemRoutes);
-app.use("/categories", categoryRoutes);
+app.use("/item", itemRoutes);
+app.use("/category", categoryRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, (error) => {
