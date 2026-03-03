@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item: delete</title>
+  </head>
+  <body>
+    <%- include('nav'); -%>
+    <h2>Delete item <%= item.id %></h2>
+    <form action="item/<%= item.id %>/delete" method="POST">
+      <label for="pass">Password: </label>
+      <input type="text" id="pass" name="pass" />
+
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>
