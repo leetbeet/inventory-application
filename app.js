@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("node:path");
-const itemRoutes = require("../routes/itemRoutes");
-const categoryRoutes = require("../routes/categoryRoutes");
+const itemRoutes = require("./routes/itemRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
