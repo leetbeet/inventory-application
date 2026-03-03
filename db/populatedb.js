@@ -4,7 +4,8 @@ const { Client } = require("pg");
 require("dotenv").config();
 
 const SQL = `
-TRUNCATE TABLE item, category RESTART IDENTITY CASCADE;
+DROP TABLE IF EXISTS item CASCADE;
+DROP TABLE IF EXISTS category CASCADE;
 
 CREATE TABLE IF NOT EXISTS category (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
