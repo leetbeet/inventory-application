@@ -2,7 +2,8 @@ const itemModel = require("../models/itemModel");
 
 async function list(req, res) {
   const items = await itemModel.getAll();
-  res.render("item/list", { items });
+  const category = null;
+  res.render("item/list", { category, items });
 }
 
 function showCreate(req, res) {
