@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category: form</title>
+  </head>
+  <body>
+    <%- include('nav'); -%>
+    <h2>Add new category</h2>
+    <form
+      action="<%= category ? '/category/' + category.id + '/update' : '/category/create' %>"
+      method="POST"
+    >
+      <label for="name">Category: </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="<%= category.name %> || ''"
+      />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
