@@ -6,7 +6,7 @@
     <title>Item: form</title>
   </head>
   <body>
-    <%- include('nav'); -%>
+    <%- include('../nav'); -%>
     <h2>Add new item</h2>
     <form
       action="<%= item ? '/item/' + item.id + '/update' : '/item/create' %>"

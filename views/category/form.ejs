@@ -6,7 +6,7 @@
     <title>Category: form</title>
   </head>
   <body>
-    <%- include('nav'); -%>
+    <%- include('../nav'); -%>
     <h2>Add new category</h2>
     <form
       action="<%= category ? '/category/' + category.id + '/update' : '/category/create' %>"

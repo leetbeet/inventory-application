@@ -6,7 +6,7 @@
     <title>Category: delete</title>
   </head>
   <body>
-    <%- include('nav'); -%>
+    <%- include('../nav'); -%>
     <h2>Delete category <%= category.id %></h2>
     <form action="category/<%= category.id %>/delete" method="POST">
       <label for="pass">Password: </label>

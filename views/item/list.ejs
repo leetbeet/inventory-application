@@ -6,8 +6,8 @@
     <title>Items</title>
   </head>
   <body>
-    <%- include('nav'); -%>
-    <h2><%= category.name || 'Items' %></h2>
+    <%- include('../nav'); -%>
+    <h2><%= category?.name || 'Items' %></h2>
     <main>
     <% items.forEach((item) => { %>
       <div class="item-card">
