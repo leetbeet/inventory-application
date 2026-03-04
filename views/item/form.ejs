@@ -8,6 +8,7 @@
   <body>
     <%- include('../nav'); -%>
     <h2>Add new item</h2>
+    <%- include("../errors.ejs") %>
     <form
       action="<%= item ? '/item/' + item.id + '/update' : '/item/create' %>"
       method="POST"

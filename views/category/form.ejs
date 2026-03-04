@@ -8,6 +8,7 @@
   <body>
     <%- include('../nav'); -%>
     <h2>Add new category</h2>
+    <%- include("../errors.ejs") %>
     <form
       action="<%= category ? '/category/' + category.id + '/update' : '/category/create' %>"
       method="POST"
