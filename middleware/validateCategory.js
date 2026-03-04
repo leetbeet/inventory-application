@@ -1,15 +1,5 @@
-const { body, validationResult } = require("express-validator");
+const { body } = require("express-validator");
 
 exports.validateCategory = [
   body("name").trim().escape().notEmpty().withMessage("Name required"),
-
-  (req, res, next) => {
-    const errors = validationResult(req);
-
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-
-    next();
-  },
 ];

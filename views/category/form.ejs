@@ -7,7 +7,7 @@
   </head>
   <body>
     <%- include('../nav'); -%>
-    <h2>Add new category</h2>
+    <h2>Category form</h2>
     <%- include("../errors.ejs") %>
     <form
       action="<%= category ? '/category/' + category.id + '/update' : '/category/create' %>"
@@ -20,6 +20,9 @@
         name="name"
         value="<%= category?.name || '' %>"
       />
+
+      <label for="pass">Password: </label>
+      <input type="password" id="pass" name="pass" />
 
       <button type="submit">Submit</button>
     </form>

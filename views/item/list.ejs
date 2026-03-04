@@ -13,16 +13,16 @@
       <div class="item-card">
         <p>Name: <%= item.name %></p>
         <p>ID: <%= item.id %></p>
-        <p>Category ID: <%= item.categoryId %></p>
+        <p>Category ID: <%= item.categoryid %></p>
         <p>Brand: <%= item.brand %></p>
         <p>Quantity: <%= item.quantity %></p>
         <div class="item-buttons">
-          <a href="item/<%= item.id %>/delete"><button>Delete</button></a>
-          <a href="item/<%= item.id %>/update"><button>Edit</button></a>
+          <a href="/item/<%= item.id %>/delete"><button>Delete</button></a>
+          <a href="/item/<%= item.id %>/update"><button>Edit</button></a>
         </div>
       </div>
     <% }) %>
-    <a href="item/create"><button>Add Item</button></a>
+    <a href="/item/create"><button>Add Item</button></a>
     </main>
   </body>
 </html>

@@ -7,21 +7,21 @@
   </head>
   <body>
     <%- include('../nav'); -%>
-    <h2>Add new item</h2>
+    <h2>Item form</h2>
     <%- include("../errors.ejs") %>
     <form
       action="<%= item ? '/item/' + item.id + '/update' : '/item/create' %>"
       method="POST"
     >
       <label for="name">Item:</label>
-      <input type="text" id="name" name="name" value="<%= item.name || ''%>" />
+      <input type="text" id="name" name="name" value="<%= item?.name || ''%>" />
 
       <label for="categoryId">Category ID: </label>
       <input
         type="number"
         id="categoryId"
         name="categoryId"
-        value="<%= item.categoryId || ''%>"
+        value="<%= item?.categoryid || ''%>"
       />
 
       <label for="brand">Brand: </label>
@@ -29,7 +29,7 @@
         type="text"
         id="brand"
         name="brand"
-        value="<%= item.brand || ''%>"
+        value="<%= item?.brand || ''%>"
       />
 
       <label for="quantity">Quantity: </label>
@@ -37,8 +37,11 @@
         type="number"
         id="quantity"
         name="quantity"
-        value="<%= item.quantity || ''%>"
+        value="<%= item?.quantity || ''%>"
       />
+
+      <label for="pass">Password: </label>
+      <input type="password" id="pass" name="pass" />
 
       <button type="submit">Submit</button>
     </form>
