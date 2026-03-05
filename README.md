@@ -27,4 +27,4 @@ A full-stack inventory management system built with **Node.js, Express, PostgreS
 
 ## Live Demo
 
-https://inventory-management-leetbeet.onrender.com/
+https://inventory-application-leetbeet.onrender.com/
