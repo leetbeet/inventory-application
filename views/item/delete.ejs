@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/nav.css" />
+    <link rel="stylesheet" href="/form.css" />
     <title>Item: delete</title>
   </head>
   <body>
@@ -12,10 +13,12 @@
     <h2>Delete item <%= item.id %></h2>
     <%- include("../errors.ejs") %>
     <form action="/item/<%= item.id %>/delete" method="POST">
-      <label for="pass">Password: </label>
-      <input type="password" id="pass" name="pass" />
+      <div>
+        <label for="pass">Password: </label>
+        <input type="password" id="pass" name="pass" />
+      </div>
 
-      <button type="submit">Delete</button>
+      <button type="submit" class="del">Delete</button>
     </form>
   </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/nav.css" />
+    <link rel="stylesheet" href="/form.css" />
     <title>Item: form</title>
   </head>
   <body>
@@ -15,35 +16,50 @@
       action="<%= item ? '/item/' + item.id + '/update' : '/item/create' %>"
       method="POST"
     >
-      <label for="name">Item:</label>
-      <input type="text" id="name" name="name" value="<%= item?.name || ''%>" />
+      <div>
+        <label for="name">Item:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value="<%= item?.name || ''%>"
+        />
+      </div>
 
-      <label for="categoryId">Category ID: </label>
-      <input
-        type="number"
-        id="categoryId"
-        name="categoryId"
-        value="<%= item?.categoryid || ''%>"
-      />
+      <div>
+        <label for="categoryId">Category ID: </label>
+        <input
+          type="number"
+          id="categoryId"
+          name="categoryId"
+          value="<%= item?.categoryid || ''%>"
+        />
+      </div>
 
-      <label for="brand">Brand: </label>
-      <input
-        type="text"
-        id="brand"
-        name="brand"
-        value="<%= item?.brand || ''%>"
-      />
+      <div>
+        <label for="brand">Brand: </label>
+        <input
+          type="text"
+          id="brand"
+          name="brand"
+          value="<%= item?.brand || ''%>"
+        />
+      </div>
 
-      <label for="quantity">Quantity: </label>
-      <input
-        type="number"
-        id="quantity"
-        name="quantity"
-        value="<%= item?.quantity || ''%>"
-      />
+      <div>
+        <label for="quantity">Quantity: </label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          value="<%= item?.quantity || ''%>"
+        />
+      </div>
 
-      <label for="pass">Password: </label>
-      <input type="password" id="pass" name="pass" />
+      <div>
+        <label for="pass">Password: </label>
+        <input type="password" id="pass" name="pass" />
+      </div>
 
       <button type="submit">Submit</button>
     </form>

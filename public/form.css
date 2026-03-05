@@ -1,0 +1,44 @@
+body {
+  color: rgb(48, 48, 48);
+}
+
+h2 {
+  padding: 32px;
+  font-size: 32px;
+  text-align: center;
+  color: black;
+}
+
+.errors {
+  width: 250px;
+  list-style: none;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 32px;
+  width: 300px;
+}
+
+form > div input {
+  width: 100%;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  background-color: white;
+  color: rgb(0, 123, 194);
+  border: 1px solid rgb(0, 123, 194);
+}
+
+.del {
+  background-color: white;
+  color: rgb(216, 0, 0);
+  border: 1px solid rgb(216, 0, 0);
+}
