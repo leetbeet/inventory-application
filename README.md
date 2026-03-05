@@ -10,7 +10,7 @@ A full-stack inventory management system built with **Node.js, Express, PostgreS
 - **Create, edit, and delete categories**
 - **Create, edit, and delete items**
 - **Server-side validation** using express-validator
-- **Password-protected actions** for creating, editing, and deleting data
+- **Password-protected actions** for creating, editing, and deleting data ("Super_Secret_Password123")
 - **PostgreSQL relational database**
 - **MVC-style architecture** with controllers, models, routes, and views
 - Dynamic UI built using **EJS templates and CSS**
