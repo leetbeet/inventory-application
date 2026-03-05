@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/nav.css" />
+    <link rel="stylesheet" href="/list.css">
     <title>Items</title>
   </head>
   <body>
     <%- include('../nav'); -%>
     <h2><%= category?.name || 'Items' %></h2>
     <main>
-    <% items.forEach((item) => { %>
-      <div class="item-card">
-        <p>Name: <%= item.name %></p>
-        <p>ID: <%= item.id %></p>
-        <p>Category ID: <%= item.categoryid %></p>
-        <p>Brand: <%= item.brand %></p>
-        <p>Quantity: <%= item.quantity %></p>
-        <div class="item-buttons">
-          <a href="/item/<%= item.id %>/delete"><button>Delete</button></a>
-          <a href="/item/<%= item.id %>/update"><button>Edit</button></a>
-        </div>
+      <div>
+        <% items.forEach((item) => { %>
+          <div class="item-card">
+            <p>Name: <%= item.name %></p>
+            <p>ID: <%= item.id %></p>
+            <p>Category ID: <%= item.categoryid %></p>
+            <p>Brand: <%= item.brand %></p>
+            <p>Quantity: <%= item.quantity %></p>
+            <div class="item-buttons">
+              <a href="/item/<%= item.id %>/delete"><button class="del">Delete</button></a>
+              <a href="/item/<%= item.id %>/update"><button class="edit">Edit</button></a>
+            </div>
+          </div>
+        <% }) %>
       </div>
-    <% }) %>
-    <a href="/item/create"><button>Add Item</button></a>
+      <a href="/item/create"><button class="add">Add Item</button></a>
     </main>
   </body>
 </html>
